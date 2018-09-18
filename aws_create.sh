@@ -19,7 +19,7 @@ aws lambda create-function \
 	--runtime java8 \
 	--role "$LAMBDA_ROLE_ARN" \
 	--handler my.service.StreamLambdaHandler::handleRequest \
-	--zip-file fileb://target/jersey-sample-1.0-SNAPSHOT.jar --memory-size 512
+	--zip-file fileb://target/aws-lambda-rest-example-1.0-SNAPSHOT.jar --memory-size 512
 
 echo "Creating API $API_NAME..."
 REST_API_ID=$(aws apigateway create-rest-api \
